@@ -5,27 +5,21 @@ public class Square {
     private double side;
 
     public Square() {
-        this.side = 1.0;
     }
-
-    public Square(double side) {
-        this.side = side;
-    }
+    
+    public Square(double side) {}
 
     public double getSurface() {
-        return side * side;
+        return 0;
     }
 
     public static double CalculateSide(double surface) throws  IllegalArgumentException {
-        if (surface < 0) {
-            throw new IllegalArgumentException("Je kunt geen negatieve oppervlakte invoeren.");
-        }
-        return Math.sqrt(surface);
+        return 0;
     }
 
     @Override
     public String toString() {
-        return String.format("Vierkant met zijde %.2f", side);
+        return "";
     }
 
 }
