@@ -1,6 +1,6 @@
 package exceptions.project.controller;
 
-import exceptions.project.model.Square;
+import exceptions.project.model.Vierkant;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
