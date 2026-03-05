@@ -1,6 +1,6 @@
 package exceptions.project.controller;
 
-import exceptions.project.model.Square;
+import exceptions.project.model.Vierkant;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -24,8 +24,8 @@ public class ExceptionsLauncher {
             }
         }
         // Geef nu de oppervlakte terug.
-        Square square = new Square(side);
-        System.out.printf("De oppervlakte is: %.2f\n", square.getSurface());
+        Vierkant vierkant = new Vierkant(side);
+        System.out.printf("De oppervlakte is: %.2f\n", vierkant.getOppervlakte());
 
         // Opdracht 4. Controleer op een positieve invoer van de oppervlakte.
         // Ook nu wordt gecontroleerd dat er een getal wordt ingevoerd.
@@ -44,7 +44,7 @@ public class ExceptionsLauncher {
             }
             // De oppervlakte is een getal. Controleer hier of dit niet negatief is.
             try {
-                System.out.printf("De bijbehorende zijde is %.2f\n", Square.CalculateSide(surface));
+                System.out.printf("De bijbehorende zijde is %.2f\n", Vierkant.berekenZijde(surface));
                 negativeInput = false;
             } catch (IllegalArgumentException berekenZijdeFout) {
                 System.out.println(berekenZijdeFout.getMessage());

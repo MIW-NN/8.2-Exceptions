@@ -5,7 +5,7 @@ public class Vierkant {
     private double zijde;
 
     public Vierkant() {
-        this.zijde = 1.0;
+        this.zijde = 0.0;
     }
 
     public Vierkant(double zijde) {
@@ -16,9 +16,13 @@ public class Vierkant {
         return zijde * zijde;
     }
 
-    public static double berekenZijde(double oppervlakte) throws  IllegalArgumentException {
-        if (oppervlakte < 0) {
-            throw new IllegalArgumentException("Je kunt geen negatieve oppervlakte invoeren.");
+    public double getZijde() {
+        return zijde;
+    }
+
+    public static double berekenZijde(double oppervlakte) throws IllegalArgumentException {
+        if (oppervlakte <= 0) {
+            throw new IllegalArgumentException("Je kunt geen negatieve of nul oppervlakte invoeren.");
         }
         return Math.sqrt(oppervlakte);
     }
